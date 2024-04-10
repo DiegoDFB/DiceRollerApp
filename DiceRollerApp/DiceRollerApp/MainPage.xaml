@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DiceRollerApp.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+         HorizontalOptions="Center"
+         Margin="130"
+         Spacing="40">
+            <Label 
+             x:Name ="Titulo"
+             Text="Dado"
+             HorizontalOptions="Center"
+             FontSize="50"/>
+            <Image
+                Source="dado.png"/>
+            <Label
+             x:Name="NumeroLadoSelecionado"
+             Text="6"
+             HorizontalOptions="Center"
+             VerticalOptions="Center"
+             FontSize="40"/>
+            <Picker 
+             x:Name ="Escolha"
+             Title="Quantidade de lados"
+             HorizontalOptions="Center"
+             WidthRequest="142"
+             SelectedIndexChanged="gravarIndex">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>4</x:String>
+                        <x:String>6</x:String>
+                        <x:String>10</x:String>
+                        <x:String>20</x:String>
+                        <x:String>100</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+            <Button Text="Girar" Clicked="girarDado"></Button>
+
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

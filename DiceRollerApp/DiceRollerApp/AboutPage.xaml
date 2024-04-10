@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DiceRollerApp.AboutPage"
+             Title="AboutPage">
+    <VerticalStackLayout
+        Padding="40">
+        <Label 
+            Text="Feito por: Arthur de Jesus Lima e Diego Francischette Blanco"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+
+        <Image
+            Source="github.png"
+            HeightRequest="100"
+            Margin="50"/>
+        <Button
+            Text="GitHub"
+            Clicked="gitHubLink"
+            />
+
+    </VerticalStackLayout>
+</ContentPage>
