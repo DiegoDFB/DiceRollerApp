@@ -5,7 +5,7 @@ dado.
 
 ## Escolha de Quantidade de Lados
 
-  O aplicativo possui uma caixa de opções do tipo dropbox (<Picker>) com valores predefinidos de quantidade de lados para o dado.
+  O aplicativo possui uma caixa de opções do tipo dropbox (Picker) com valores predefinidos de quantidade de lados para o dado.
   A simulação da rolagem será feita entre o número 1 e o número de lados escolhido pelo usuário.
 
 ## Menu de Navegação
