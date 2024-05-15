@@ -14,7 +14,7 @@ namespace DiceRollerApp.Models
         public int Lados { get; set; }
         public int NumeroSorteado { get; set; }
 
-        Dice(int quantidadeLados)
+        public Dice(int quantidadeLados)
         {
             Lados = quantidadeLados;
         }

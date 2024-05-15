@@ -16,16 +16,17 @@
             <Image
             Source="dado.png"/>
             <Label
-         x:Name="NumeroLadoSelecionado"
-         Text="6"
-         HorizontalOptions="Center"
-         VerticalOptions="Center"
-         FontSize="40"/>
+                 x:Name="ResultLabel"
+                 Text="{Binding NumeroSorteado}"
+                 HorizontalOptions="Center"
+                 VerticalOptions="Center"
+                 FontSize="40"/>
             <Picker 
-         x:Name ="Escolha"
-         Title="Quantidade de lados"
-         HorizontalOptions="Center"
-         WidthRequest="142">
+                 x:Name ="Escolha"
+                 Title="Quantidade de lados"
+                 HorizontalOptions="Center"
+                 WidthRequest="142"
+                 SelectedItem="{Binding QuantidadeLados}">
                 <Picker.ItemsSource>
                     <x:Array Type="{x:Type x:String}">
                         <x:String>4</x:String>
@@ -36,7 +37,10 @@
                     </x:Array>
                 </Picker.ItemsSource>
             </Picker>
-            <Button Text="Girar" Clicked="RollBtn_Clicked"></Button>
+            <Button 
+                x:Name="RollBtn"
+                Text="Rolar o dado"
+                Command="{Binding RolarDadoCommand}"></Button>
 
 
         </VerticalStackLayout>

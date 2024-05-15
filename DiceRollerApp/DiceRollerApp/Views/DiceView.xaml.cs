@@ -1,4 +1,5 @@
 using DiceRollerApp.Models;
+using DiceRollerApp.ViewModel;
 namespace DiceRollerApp.Views;
 
 public partial class DiceView : ContentPage
@@ -6,13 +7,7 @@ public partial class DiceView : ContentPage
 	public DiceView()
 	{
 		InitializeComponent();
+		BindingContext = new DiceViewModel();
 	}
 
-	private void RollBtn_Clicked(object sender, EventArgs e)
-	{
-		int quantidadeLados = Convert.ToInt32(Escolha.SelectedItem);
-		Dice dice = new Dice(quantidadeLados);
-		dice.Rolar();
-		NumeroLadoSelecionado.Text = dice.NumeroSorteado.ToString();
-	}
 }
